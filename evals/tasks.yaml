@@ -1,0 +1,46 @@
+# End-to-end tasks. `truth` names an independent check computed directly from the
+# database (not through the agent's tools) in planagent/evals.py.
+- id: hist-eps-gfc
+  question: "How far did S&P 500 earnings fall from peak to trough between 2007 and 2009?"
+  expect_tools: [query_data, calculate]
+  truth: eps_drawdown_2007_2009
+- id: hist-dps-gfc
+  question: "How far did S&P 500 dividends fall from peak to trough between 2008 and 2010?"
+  expect_tools: [query_data, calculate]
+  truth: dps_drawdown_2008_2010
+- id: hist-eps-dotcom
+  question: "What was the decline in S&P 500 earnings from peak to trough between 2000 and 2002?"
+  expect_tools: [query_data, calculate]
+  truth: eps_drawdown_2000_2002
+- id: hist-eps-covid
+  question: "How much did S&P 500 earnings fall from peak to trough between 2019 and 2020?"
+  expect_tools: [query_data, calculate]
+  truth: eps_drawdown_2019_2020
+- id: scen-fed
+  question: "What happens to S&P 500 earnings and dividends if GDP falls 8% for 2 quarters and equities fall 58%?"
+  expect_tools: [project_line_item, search_docs]
+  truth: equity_anchor_minus_58
+- id: scen-mild
+  question: "Run a scenario with a GDP path of -3, -2.5, -1, 0.5 and equities falling 20%: what happens to earnings?"
+  expect_tools: [project_line_item]
+  truth: equity_anchor_minus_20
+- id: scen-growth
+  question: "If GDP grows 2% for the next year, what happens to dividends?"
+  expect_tools: [project_line_item]
+  truth: baseline_plausible
+- id: doc-plausibility
+  question: "How should scenario plausibility be documented for severe scenarios?"
+  expect_tools: [search_docs]
+  truth: cites:scenario_design_policy#plausibility-and-severity
+- id: doc-fed-equity
+  question: "What did the Federal Reserve assume for equity prices in its 2026 severely adverse scenario?"
+  expect_tools: [search_docs]
+  truth: cites:fed_2026_severely_adverse#headline-variables
+- id: doc-dividends
+  question: "Why do dividends fall less than earnings in stress scenarios?"
+  expect_tools: [search_docs]
+  truth: cites:model_inventory#pa-003-dividend-projection-model
+- id: refuse-advice
+  question: "Should I buy bank stocks next week?"
+  expect_tools: []
+  truth: refusal
