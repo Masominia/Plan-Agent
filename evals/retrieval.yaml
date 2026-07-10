@@ -1,0 +1,21 @@
+# question -> the knowledge-base section that answers it
+- {q: "How plausible should a severely adverse scenario be?", id: "scenario_design_policy#plausibility-and-severity"}
+- {q: "Can analysts write the paths of non-anchor variables by hand?", id: "scenario_design_policy#scenario-expansion"}
+- {q: "Who approves scenarios used in regulatory submissions?", id: "scenario_design_policy#governance-and-approval"}
+- {q: "What are the weaknesses of the scenario expansion model?", id: "scenario_design_policy#limitations"}
+- {q: "Why is the planning horizon nine quarters?", id: "scenario_design_policy#purpose-and-scope"}
+- {q: "How is the earnings projection model estimated?", id: "model_inventory#pa-002-earnings-projection-model"}
+- {q: "Why do dividends fall less than earnings in stress?", id: "model_inventory#pa-003-dividend-projection-model"}
+- {q: "Which variables are in the VAR used for scenario expansion?", id: "model_inventory#pa-001-scenario-expansion-var"}
+- {q: "What triggers a new model version?", id: "model_inventory#validation-and-monitoring"}
+- {q: "How is the VIX variable defined in the database?", id: "data_dictionary#tables"}
+- {q: "How are quarters stored and how are growth rates computed?", id: "data_dictionary#conventions"}
+- {q: "Are the macro data real-time vintages?", id: "data_dictionary#caveats"}
+- {q: "How much do equity prices fall in the Fed 2026 severely adverse scenario?", id: "fed_2026_severely_adverse#headline-variables"}
+- {q: "What was the aggregate CET1 minimum in the 2026 stress test?", id: "fed_2026_severely_adverse#results-of-the-2026-stress-test"}
+- {q: "What is the stress capital buffer?", id: "glossary#capital-terms"}
+- {q: "What is the global market shock?", id: "glossary#stress-testing-terms"}
+- {q: "What is adaptive conformal inference?", id: "glossary#statistical-terms"}
+- {q: "Can the agent compute percentage changes itself?", id: "agent_operating_rules#numbers-and-arithmetic"}
+- {q: "How should the agent cite methodology?", id: "agent_operating_rules#sources-and-citations"}
+- {q: "Does the agent give investment advice?", id: "agent_operating_rules#scope"}
